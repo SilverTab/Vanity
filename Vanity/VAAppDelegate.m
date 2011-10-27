@@ -11,7 +11,7 @@
 @interface VAAppDelegate(Private)
 - (void)fetchData;
 - (void)timerFireMethod:(NSTimer*)theTimer;
-- (void)newSale:(int)oldTotal;
+- (void)newSale:(int)newTotal oldTotal:(int)oldTotal;
 @end
 
 
@@ -49,13 +49,17 @@
     [self.window makeKeyAndOrderFront:sender];
 }
 
+- (IBAction)refreshNow:(id)sender
+{
+    [self fetchData];
+}
 
 - (void)timerFireMethod:(NSTimer*)theTimer
 {
     [self fetchData];
 }
 
-- (void)newSale:(int)oldTotal
+- (void)newSale:(int)newTotal oldTotal:(int)oldTotal
 {
     // do osmething fun
     int dif = lastCount - oldTotal;
@@ -83,7 +87,7 @@
             theItem.title = [newCount stringByAppendingString:@" sales"];
             if ([newCount intValue] > lastCount && lastCount != -1) {
                 // a new sale!
-                [self newSale:lastCount];
+                [self newSale:[newCount intValue] oldTotal:lastCount];
             }
             lastCount = [newCount intValue];
             

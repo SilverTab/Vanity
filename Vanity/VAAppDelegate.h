@@ -19,5 +19,5 @@
 @property (assign) IBOutlet NSMenu *theMenu;
 
 - (IBAction)configureClicked:(id)sender;
-
+- (IBAction)refreshNow:(id)sender;
 @end
