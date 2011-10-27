@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C1FA4B91459B016007A795C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1FA4B81459B016007A795C /* Cocoa.framework */; };
+		7C1FA4C31459B016007A795C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FA4C11459B016007A795C /* InfoPlist.strings */; };
+		7C1FA4C51459B016007A795C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1FA4C41459B016007A795C /* main.m */; };
+		7C1FA4C91459B016007A795C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FA4C71459B016007A795C /* Credits.rtf */; };
+		7C1FA4CC1459B016007A795C /* VAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1FA4CB1459B016007A795C /* VAAppDelegate.m */; };
+		7C1FA4CF1459B017007A795C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FA4CD1459B017007A795C /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C1FA4B41459B016007A795C /* Vanity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vanity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1FA4B81459B016007A795C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7C1FA4BB1459B016007A795C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7C1FA4BC1459B016007A795C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7C1FA4BD1459B016007A795C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7C1FA4C01459B016007A795C /* Vanity-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vanity-Info.plist"; sourceTree = "<group>"; };
+		7C1FA4C21459B016007A795C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7C1FA4C41459B016007A795C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C1FA4C61459B016007A795C /* Vanity-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vanity-Prefix.pch"; sourceTree = "<group>"; };
+		7C1FA4C81459B016007A795C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7C1FA4CA1459B016007A795C /* VAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAAppDelegate.h; sourceTree = "<group>"; };
+		7C1FA4CB1459B016007A795C /* VAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAAppDelegate.m; sourceTree = "<group>"; };
+		7C1FA4CE1459B017007A795C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C1FA4B11459B016007A795C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1FA4B91459B016007A795C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C1FA4A91459B016007A795C = {
+			isa = PBXGroup;
+			children = (
+				7C1FA4BE1459B016007A795C /* Vanity */,
+				7C1FA4B71459B016007A795C /* Frameworks */,
+				7C1FA4B51459B016007A795C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C1FA4B51459B016007A795C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FA4B41459B016007A795C /* Vanity.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C1FA4B71459B016007A795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FA4B81459B016007A795C /* Cocoa.framework */,
+				7C1FA4BA1459B016007A795C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C1FA4BA1459B016007A795C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FA4BB1459B016007A795C /* AppKit.framework */,
+				7C1FA4BC1459B016007A795C /* CoreData.framework */,
+				7C1FA4BD1459B016007A795C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7C1FA4BE1459B016007A795C /* Vanity */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FA4CA1459B016007A795C /* VAAppDelegate.h */,
+				7C1FA4CB1459B016007A795C /* VAAppDelegate.m */,
+				7C1FA4CD1459B017007A795C /* MainMenu.xib */,
+				7C1FA4BF1459B016007A795C /* Supporting Files */,
+			);
+			path = Vanity;
+			sourceTree = "<group>";
+		};
+		7C1FA4BF1459B016007A795C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C1FA4C01459B016007A795C /* Vanity-Info.plist */,
+				7C1FA4C11459B016007A795C /* InfoPlist.strings */,
+				7C1FA4C41459B016007A795C /* main.m */,
+				7C1FA4C61459B016007A795C /* Vanity-Prefix.pch */,
+				7C1FA4C71459B016007A795C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C1FA4B31459B016007A795C /* Vanity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C1FA4D21459B017007A795C /* Build configuration list for PBXNativeTarget "Vanity" */;
+			buildPhases = (
+				7C1FA4B01459B016007A795C /* Sources */,
+				7C1FA4B11459B016007A795C /* Frameworks */,
+				7C1FA4B21459B016007A795C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vanity;
+			productName = Vanity;
+			productReference = 7C1FA4B41459B016007A795C /* Vanity.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C1FA4AB1459B016007A795C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7C1FA4AE1459B016007A795C /* Build configuration list for PBXProject "Vanity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7C1FA4A91459B016007A795C;
+			productRefGroup = 7C1FA4B51459B016007A795C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C1FA4B31459B016007A795C /* Vanity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C1FA4B21459B016007A795C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1FA4C31459B016007A795C /* InfoPlist.strings in Resources */,
+				7C1FA4C91459B016007A795C /* Credits.rtf in Resources */,
+				7C1FA4CF1459B017007A795C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C1FA4B01459B016007A795C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1FA4C51459B016007A795C /* main.m in Sources */,
+				7C1FA4CC1459B016007A795C /* VAAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7C1FA4C11459B016007A795C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C1FA4C21459B016007A795C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7C1FA4C71459B016007A795C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C1FA4C81459B016007A795C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7C1FA4CD1459B017007A795C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C1FA4CE1459B017007A795C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C1FA4D01459B017007A795C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7C1FA4D11459B017007A795C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7C1FA4D31459B017007A795C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Vanity/Vanity-Prefix.pch";
+				INFOPLIST_FILE = "Vanity/Vanity-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7C1FA4D41459B017007A795C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Vanity/Vanity-Prefix.pch";
+				INFOPLIST_FILE = "Vanity/Vanity-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C1FA4AE1459B016007A795C /* Build configuration list for PBXProject "Vanity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C1FA4D01459B017007A795C /* Debug */,
+				7C1FA4D11459B017007A795C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C1FA4D21459B017007A795C /* Build configuration list for PBXNativeTarget "Vanity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C1FA4D31459B017007A795C /* Debug */,
+				7C1FA4D41459B017007A795C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C1FA4AB1459B016007A795C /* Project object */;
+}

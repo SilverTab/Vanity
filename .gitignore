@@ -1,0 +1,65 @@
+*.psd
+*.ai
+
+boost_info
+boost_info/
+boost_info/*
+
+git_ignored/*
+git_ignored/
+git_ignored
+
+Resources/TextMate/Errors.txt
+Resources/TextMate/tm_bundles_disabled/*
+Resources/TextMate/tm_bundles_nogit/*
+Resources/TextMate/tm_themes_disabled/*
+
+# Lemon
+*.out
+
+# Xcode
+DerivedData/*
+deriveddata/*
+build/*
+build_externals/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+.*.sw[a-z]
+*.un~
+Session.vim
+
+.DS_Store
+Icon?
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Ignore tags created by etags and ctags
+TAGS
+tags
+
+*.tmproj
+*.tmproject
+tmtags
