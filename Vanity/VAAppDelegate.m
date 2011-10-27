@@ -76,7 +76,7 @@
 
 - (void)fetchData
 {
-    theItem.title = @"Updating...";
+    // theItem.title = @"Updating...";
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *newCount = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://chocolatapp.com/buy/priva291_hasbought.php"] 
                                                       encoding:NSUTF8StringEncoding 
