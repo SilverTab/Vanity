@@ -7,9 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-@interface VAAppDelegate : NSObject <NSApplicationDelegate>
+#import <Growl/Growl.h>
+@interface VAAppDelegate : NSObject <NSApplicationDelegate, GrowlApplicationBridgeDelegate> {
+    NSMenu *theMenu;
+    NSStatusItem *theItem;
+    NSTimer *mainTimer;
+    int lastCount;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSMenu *theMenu;
+
+- (IBAction)configureClicked:(id)sender;
 
 @end
