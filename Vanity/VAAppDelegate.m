@@ -62,10 +62,10 @@
 - (void)newSale:(int)newTotal oldTotal:(int)oldTotal
 {
     // do osmething fun
-    int dif = lastCount - oldTotal;
+    int dif = newTotal - oldTotal;
     [[NSSound soundNamed:@"cash_register_x.wav"] play];
     [GrowlApplicationBridge notifyWithTitle:@"New Chocolat Sale!" 
-                                description:[NSString stringWithFormat:@"%d New Sales! %d happy people now own a license of Chocolat!", dif, lastCount] 
+                                description:[NSString stringWithFormat:@"%d New Sales! %d happy people now own a license of Chocolat!", dif, newTotal] 
                            notificationName:@"VANewSaleNotification" 
                                    iconData:nil 
                                    priority:0 
