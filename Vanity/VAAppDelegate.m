@@ -44,6 +44,12 @@
     
 }
 
+- (void)windowWillClose:(NSNotification *)notification
+{
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self fetchData];
+}
+
 - (IBAction)configureClicked:(id)sender
 {
     [self.window makeKeyAndOrderFront:sender];
@@ -84,7 +90,11 @@
         // update the UI
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            theItem.title = [newCount stringByAppendingString:@" sales"];
+            NSMutableString *theNewName = [NSMutableString stringWithString:[newCount stringByAppendingString:@" sales"]];
+            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"VAPimpOption"]) {
+                [theNewName appendFormat:@" ($%d)", ([newCount intValue] * 34)];
+            }
+            theItem.title = theNewName;
             if ([newCount intValue] > lastCount && lastCount != -1) {
                 // a new sale!
                 [self newSale:[newCount intValue] oldTotal:lastCount];

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Growl/Growl.h>
-@interface VAAppDelegate : NSObject <NSApplicationDelegate, GrowlApplicationBridgeDelegate> {
+@interface VAAppDelegate : NSObject <NSApplicationDelegate, GrowlApplicationBridgeDelegate, NSWindowDelegate> {
     NSMenu *theMenu;
     NSStatusItem *theItem;
     NSTimer *mainTimer;
