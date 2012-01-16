@@ -17,6 +17,7 @@
 		7C1FA4D81459BF98007A795C /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7C1FA4D51459BF81007A795C /* Growl.framework */; };
 		7C1FA4DC1459C4FC007A795C /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FA4DB1459C4FC007A795C /* Growl Registration Ticket.growlRegDict */; };
 		7C1FA4DE1459DB49007A795C /* cash_register_x.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7C1FA4DD1459DB49007A795C /* cash_register_x.wav */; };
+		7CAFA8A114C4CDDD0060AD7A /* sparta.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CAFA8A014C4CDDD0060AD7A /* sparta.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		7C1FA4D51459BF81007A795C /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = Vanity/Growl.framework; sourceTree = "<group>"; };
 		7C1FA4DB1459C4FC007A795C /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Vanity/Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		7C1FA4DD1459DB49007A795C /* cash_register_x.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cash_register_x.wav; sourceTree = "<group>"; };
+		7CAFA8A014C4CDDD0060AD7A /* sparta.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sparta.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7C1FA4DD1459DB49007A795C /* cash_register_x.wav */,
+				7CAFA8A014C4CDDD0060AD7A /* sparta.wav */,
 				7C1FA4C01459B016007A795C /* Vanity-Info.plist */,
 				7C1FA4C11459B016007A795C /* InfoPlist.strings */,
 				7C1FA4C41459B016007A795C /* main.m */,
@@ -182,6 +185,7 @@
 				7C1FA4DE1459DB49007A795C /* cash_register_x.wav in Resources */,
 				7C1FA4CF1459B017007A795C /* MainMenu.xib in Resources */,
 				7C1FA4DC1459C4FC007A795C /* Growl Registration Ticket.growlRegDict in Resources */,
+				7CAFA8A114C4CDDD0060AD7A /* sparta.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +327,7 @@
 				7C1FA4D41459B017007A795C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -69,7 +69,13 @@
 {
     // do osmething fun
     int dif = newTotal - oldTotal;
-    [[NSSound soundNamed:@"cash_register_x.wav"] play];
+    NSSound *yaySound;
+    if (newTotal == 300) {
+        yaySound = [NSSound soundNamed:@"sparta.wav"];
+    } else {
+        yaySound = [NSSound soundNamed:@"cash_register_x.wav"];
+    }
+    [yaySound play];
     [GrowlApplicationBridge notifyWithTitle:@"New Chocolat Sale!" 
                                 description:[NSString stringWithFormat:@"%d New Sales! %d happy people now own a license of Chocolat!", dif, newTotal] 
                            notificationName:@"VANewSaleNotification" 
@@ -83,25 +89,29 @@
 - (void)fetchData
 {
     // theItem.title = @"Updating...";
+    NSError *error = nil;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *newCount = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://chocolatapp.com/buy/priva291_hasbought.php"] 
                                                       encoding:NSUTF8StringEncoding 
-                                                         error:nil];
-        // update the UI
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            NSMutableString *theNewName = [NSMutableString stringWithString:[newCount stringByAppendingString:@" sales"]];
-            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"VAPimpOption"]) {
-                [theNewName appendFormat:@" ($%d)", ([newCount intValue] * 34)];
-            }
-            theItem.title = theNewName;
-            if ([newCount intValue] > lastCount && lastCount != -1) {
-                // a new sale!
-                [self newSale:[newCount intValue] oldTotal:lastCount];
-            }
-            lastCount = [newCount intValue];
-            
-        });
+                                                         error:&error];
+        if (!error) {
+            // update the UI
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSMutableString *theNewName = [NSMutableString stringWithString:[newCount stringByAppendingString:@" sales"]];
+                if ([[NSUserDefaults standardUserDefaults] boolForKey:@"VAPimpOption"]) {
+                    [theNewName appendFormat:@" ($%d)", ([newCount intValue] * 34)];
+                }
+                theItem.title = theNewName;
+                if ([newCount intValue] > lastCount && lastCount != -1) {
+                    // a new sale!
+                    [self newSale:[newCount intValue] oldTotal:lastCount];
+                }
+                lastCount = [newCount intValue];
+                
+            });
+        }
+        
         
     });
 }
