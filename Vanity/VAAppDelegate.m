@@ -89,8 +89,9 @@
 - (void)fetchData
 {
     // theItem.title = @"Updating...";
-    NSError *error = nil;
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSError *error = nil;
         NSString *newCount = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://chocolatapp.com/buy/priva291_hasbought.php"] 
                                                       encoding:NSUTF8StringEncoding 
                                                          error:&error];
