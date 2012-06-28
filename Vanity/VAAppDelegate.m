@@ -6,6 +6,8 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+#define PRESALES 1055
+
 #import "VAAppDelegate.h"
 
 @interface VAAppDelegate(Private)
@@ -70,11 +72,9 @@
     // do osmething fun
     int dif = newTotal - oldTotal;
     NSSound *yaySound;
-    if (newTotal == 300) {
-        yaySound = [NSSound soundNamed:@"sparta.wav"];
-    } else {
-        yaySound = [NSSound soundNamed:@"cash_register_x.wav"];
-    }
+    
+    yaySound = [NSSound soundNamed:@"cash_register_x.wav"];
+    
     [yaySound play];
     [GrowlApplicationBridge notifyWithTitle:@"New Chocolat Sale!" 
                                 description:[NSString stringWithFormat:@"%d New Sales! %d happy people now own a license of Chocolat!", dif, newTotal] 
@@ -95,13 +95,15 @@
         NSString *newCount = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://chocolatapp.com/buy/priva291_hasbought.php"] 
                                                       encoding:NSUTF8StringEncoding 
                                                          error:&error];
+        int iNewCount = [newCount intValue];
+        iNewCount -= PRESALES;
         if (!error) {
             // update the UI
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 NSMutableString *theNewName = [NSMutableString stringWithString:[newCount stringByAppendingString:@" sales"]];
                 if ([[NSUserDefaults standardUserDefaults] boolForKey:@"VAPimpOption"]) {
-                    [theNewName appendFormat:@" ($%d)", ([newCount intValue] * 34)];
+                    [theNewName appendFormat:@" ($%d)", (PRESALES * 34 + (([newCount intValue] - PRESALES) * 49))];
                 }
                 theItem.title = theNewName;
                 if ([newCount intValue] > lastCount && lastCount != -1) {
