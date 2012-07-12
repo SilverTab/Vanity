@@ -44,6 +44,7 @@
                                                userInfo:nil 
                                                 repeats:YES];
     
+
 }
 
 - (void)windowWillClose:(NSNotification *)notification
@@ -73,16 +74,27 @@
     int dif = newTotal - oldTotal;
     NSSound *yaySound;
     
-    yaySound = [NSSound soundNamed:@"cash_register_x.wav"];
+    yaySound = [NSSound soundNamed:@"cash_register2.wav"];
     
     [yaySound play];
-    [GrowlApplicationBridge notifyWithTitle:@"New Chocolat Sale!" 
-                                description:[NSString stringWithFormat:@"%d New Sales! %d happy people now own a license of Chocolat!", dif, newTotal] 
-                           notificationName:@"VANewSaleNotification" 
-                                   iconData:nil 
-                                   priority:0 
-                                   isSticky:NO 
-                               clickContext:nil];
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"VAGrowl"] boolValue]) {
+        [GrowlApplicationBridge notifyWithTitle:@"New Chocolat Sale!"
+                                    description:[NSString stringWithFormat:@"%d New Sales! %d happy people now own a license of Chocolat!", dif, newTotal] 
+                               notificationName:@"VANewSaleNotification" 
+                                       iconData:nil 
+                                       priority:0 
+                                       isSticky:NO 
+                                   clickContext:nil];
+    } else {
+        NSUserNotification *notif = [[NSUserNotification alloc] init];
+        notif.title = @"New Chocolat Sale!";
+        notif.informativeText = [NSString stringWithFormat:@"%d New Sales! %d happy people now own a license of Chocolat!", dif, newTotal];
+        notif.hasActionButton = NO;
+        notif.deliveryDate = [NSDate date];
+        [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:notif];
+    }
+    
+    
 }
 
 
